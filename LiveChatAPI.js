@@ -1,5 +1,4 @@
-var botId    = "st-0954eedb-889c-5491-9f92-f5671760c942";
-var botName  = "LiveChat";
+
 var sdk      = require("./lib/sdk");
 var Promise  = require('bluebird');
 var template = require('url-template');

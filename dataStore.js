@@ -44,8 +44,10 @@ DataStore.prototype.deleteVariable = function(variable, langArr) {
     for (var i = 0; i < langArr.length; i++) {
         if (!this.botVariables[i].error) {
             var eleIndex = _.findIndex(this.botVariables[i].variables, ['_id', variable._id]);
-            this.botVariables[i].variables.splice(eleIndex, 1);
-            this.botVariables[i].count = this.botVariables[i].count - 1;
+            if (eleIndex > -1) {
+                this.botVariables[i].variables.splice(eleIndex, 1);
+                this.botVariables[i].count = this.botVariables[i].count - 1;
+            }
         }
     }
 

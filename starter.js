@@ -1,6 +1,6 @@
-require("dotenv").config();
+try { require('dotenv').config(); } catch (e) {}
 
-var sdk = require("./lib/sdk");
+var sdk      = require("./lib/sdk");
 const logger = require("./lib/logger");
 
 const botId = process.env.BOT_ID;

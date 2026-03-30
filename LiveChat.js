@@ -1,10 +1,8 @@
-var botId               = "st-f82726cb-4cd6-5ec4-bd35-7f5542b616dc";
-var botName             = "AgentTransferDemoBot";
 var sdk                 = require("./lib/sdk");
 var Promise             = require('bluebird');
 var api                 = require('./LiveChatAPI.js');
 var _                   = require('lodash');
-var config              = require('./config.json');
+var config               = require('./config.json');
 var debug               = require('debug')("Agent");
 var schedular           = require('node-schedule');
 var _map                = {}; //used to store secure session ids //TODO: need to find clear map var
