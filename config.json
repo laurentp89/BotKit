@@ -1,41 +1,26 @@
 {
-    "server": {
-        "port": 8005
+  "server": {
+    "port": 8003
+  },
+  "app": {
+    "apiPrefix": "",
+    "url": "https://pennoned-cherly-muddly.ngrok-free.dev"
+  },
+  "validations": {
+    "leastNodeVersion": 22
+  },
+  "jwt": {
+    "jwtAlgorithm": "HS256",
+    "jwt-expiry": 60
+  },
+  "redis": {
+    "options": {
+      "host": "localhost",
+      "port": 6379
     },
-    "app": {
-        "apiPrefix" : "",
-        "url": "https://0ddf-122-174-183-138.ngrok-free.app"
-    },
-    "validations": {
-        "leastNodeVersion": 10
-    },
-    "credentials": {
-        "apikey": "ljbTlnlEWr7zsF+2tvZmIZdONf1JgVi/sJHOuAYzf9I=",
-        "appId": "cs-780fcabf-68a7-5cf5-9ffc-bd818093f185",
-        "st-67890":{
-            "apikey": "test_api_key2",
-            "appId": "test_app_id2"
-        }
-    },
-    "jwt": {
-        "jwtAlgorithm": "HS256",
-        "jwt-expiry": 60,
-        "st-67890":{
-            "jwtAlgorithm": "HS512",
-            "jwt-expiry": 60
-        }
-    },
-    "redis": {
-        "options": {
-            "host": "localhost",
-            "port": 6379
-        },
-        "available": true
-    },
-    "examples" : {
-        "mockServicesHost"  : "http://localhost:8004"
-    },
-    "liveagentlicense": "8947569",
-    "supportsMessageAck": true,
-    "languages":["en","de"]
+    "available": true
+  },
+  "liveagentlicense": "8947569",
+  "supportsMessageAck": true,
+  "languages": ["en"]
 }

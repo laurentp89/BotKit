@@ -1,9 +1,9 @@
 
-var sdk      = require("./lib/sdk");
-var Promise  = require('bluebird');
-var template = require('url-template');
+var sdk              = require("./lib/sdk");
+var Promise          = require('bluebird');
+var template         = require('url-template');
 var { makeHttpCall } = require("./makeHttpCall");
-const qs = require('qs');
+const qs             = require('qs');
 
 
 var initUrl = "https://api.livechatinc.com/visitors/{visitorId}/chat/start";
