@@ -4,7 +4,7 @@
   },
   "app": {
     "apiPrefix": "",
-    "url": "https://pennoned-cherly-muddly.ngrok-free.dev"
+    "url": "https://testing.bk-internal-project.com/testbotkit"
   },
   "validations": {
     "leastNodeVersion": 22
