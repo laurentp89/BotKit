@@ -32,7 +32,7 @@ try {
     await logger.info("✅ Servidor iniciado.");
 
     await logger.info("Registrando bot...");
-    sdk.registerBot(require("./starter.js"));
+        await sdk.registerBot(require("./starter.js"));
     logger.info("✅ Bot registrado.");
 
     logger.info("🚀 Botkit listo para recibir solicitudes.");
