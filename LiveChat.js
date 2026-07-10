@@ -48,7 +48,6 @@ function getPendingMessages(visitorId, ssid, last_message_id) {
       });
     })
     .catch(function (e) {
-      console.error(e);
       delete userDataMap[visitorId];
       delete _map[visitorId];
     });
@@ -171,7 +170,6 @@ function onUserMessage(requestId, data, cb) {
     formdata.licence_id = config.liveagentlicense;
     formdata.message = data.message;
     return api.sendMsg(visitorId, formdata).catch(function (e) {
-      console.error(e);
       delete userDataMap[visitorId];
       delete _map[visitorId];
       return sdk.sendBotMessage(data, cb);
@@ -199,7 +197,6 @@ module.exports = {
     onBotMessage(requestId, data, callback);
   },
   on_agent_transfer: function (requestId, data, callback) {
-    debug("on_webhook");
     onAgentTransfer(requestId, data, callback);
   },
   gethistory: gethistory,
