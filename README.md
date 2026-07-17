@@ -42,8 +42,31 @@ Las peticiones webhook entrantes desde Kore.ai (`POST /sdk/bots/:botId/:eventNam
 
 ## Instalación
 
+### Node.js vía NVM
+
+Se recomienda instalar Node con [nvm](https://github.com/nvm-sh/nvm) para poder fijar la versión LTS requerida:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
+
+Reiniciar la terminal (o recargar el shell) y luego instalar la última versión LTS de Node:
+
+```bash
+nvm install --lts
+nvm use --lts
+```
+
+### Dependencias del proyecto
+
 ```bash
 npm install
+```
+
+### PM2 (para producción)
+
+```bash
+npm install -g pm2
 ```
 
 ## Configuración
