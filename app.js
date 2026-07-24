@@ -8,6 +8,26 @@ try {
 } catch (e) {}
 
 try {
+
+  const fs = require('fs');
+  if (fs.existsSync('/etc/environment')) {
+    const envContent = fs.readFileSync('/etc/environment', 'utf-8');
+    envContent.split('\n').forEach(line => {
+      const trimmed = line.trim();
+      if (trimmed && !trimmed.startsWith('#')) {
+        const [key, value] = trimmed.split('=');
+        if (key && !process.env[key]) {
+          process.env[key] = value.replace(/^"|"$/g, '');
+        }
+      }
+    });
+  }
+} catch (err) {
+  console.error("NO FS")
+}
+
+
+try {
   var Application = require("./lib/app");
   var Server = require("./lib/server");
   var sdk = require("./lib/sdk");
