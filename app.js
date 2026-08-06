@@ -5,7 +5,7 @@ También aquí instaciamos la aplicación y el servidor.
 */
 try {
   require("dotenv").config();
-} catch (e) {}
+} catch (err) {console.error("Error cargando .env")}
 
 try {
 
@@ -52,7 +52,7 @@ try {
     await logger.info("✅ Servidor iniciado.");
 
     await logger.info("Registrando bot...");
-        await sdk.registerBot(require("./starter.js"));
+    await sdk.registerBot(require("./starter.js"));
     logger.info("✅ Bot registrado.");
 
     logger.info("🚀 Botkit listo para recibir solicitudes.");

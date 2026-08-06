@@ -5,10 +5,18 @@ const logger = require("./lib/logger");
 const botId = process.env.BOT_ID;
 const botName = process.env.BOT_NAME;
 
+function normalizeBotName(botName) {
+    const normalizedBotName = botName.toLowerCase().trim().replaceAll(" ", "_").replaceAll("'", "");
+    return normalizedBotName;
+}
+
+const normalizedBotName = normalizeBotName(botName);
+
 
 module.exports = {
     botId,
     botName,
+    normalizedBotName: normalizedBotName,
 
     on_user_message: function (requestId, data, callback) {
         console.log("on_user_message");
